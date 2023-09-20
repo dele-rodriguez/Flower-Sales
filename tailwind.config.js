@@ -17,13 +17,17 @@ export default {
       fontSize: {
         'sm': '14px',
         'md': '16px',
-        'lg': '18px',
+        'lg': '20px',
         'xl': '25px',
       },
       fontWeight: {
+        thin:  300,
         normal: 400,
-        medium: 500,
-        bold: 700,
+        medium: 600,
+        bold: 800,
+      },
+      scale: {
+        '-1': '-1',
       },
     },
   },
