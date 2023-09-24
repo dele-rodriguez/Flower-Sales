@@ -4,7 +4,6 @@ import NavLink from "./Navlink";
 
 function Header() {
 
-    const [activeLink, setActiveLink] = useState('HOME');
     const [collaspe , SetCollaspe] = useState(true);
 
     return (
@@ -21,12 +20,12 @@ function Header() {
                         }
                     </svg>
                     <div className={`${collaspe ? 'hidden' : 'flex'} absolute z-10 flex-col items-center justify-around w-full h-5/6 mt-5 text-sm font-bold bg-lightpink md:flex md:relative md:flex-row md:justify-between md:bottom-2.5 md:px-1`}>
-                        <NavLink route="/" setCollaspeState={SetCollaspe} collaspeState={collaspe}  activeState={activeLink} setActiveState={setActiveLink} linkName="HOME"/>
-                        <NavLink route="/" setCollaspeState={SetCollaspe} collaspeState={collaspe}  activeState={activeLink} setActiveState={setActiveLink} linkName="SHOP"/>
-                        <NavLink route="/" setCollaspeState={SetCollaspe} collaspeState={collaspe}  activeState={activeLink} setActiveState={setActiveLink} linkName="COLLECTION"/>
-                        <NavLink route="/" setCollaspeState={SetCollaspe} collaspeState={collaspe}  activeState={activeLink} setActiveState={setActiveLink} linkName="BLOG"/>
-                        <NavLink route="/" setCollaspeState={SetCollaspe} hideHere={"md:hidden"} activeState={activeLink} setActiveState={setActiveLink} linkName="ABOUT"/>
-                        <NavLink route="/" setCollaspeState={SetCollaspe} hideHere={"md:hidden"} activeState={activeLink} setActiveState={setActiveLink} linkName="CONTACT US"/>
+                        <NavLink route="/" setCollaspeState={SetCollaspe} collaspeState={collaspe}  linkName="HOME"/>
+                        <NavLink route="/shop" setCollaspeState={SetCollaspe} collaspeState={collaspe}  linkName="SHOP"/>
+                        <NavLink route="/collection" setCollaspeState={SetCollaspe} collaspeState={collaspe}  linkName="COLLECTION"/>
+                        <NavLink route="/blog" setCollaspeState={SetCollaspe} collaspeState={collaspe}  linkName="BLOG"/>
+                        <NavLink route="/about" setCollaspeState={SetCollaspe} hideHere={"md:hidden"} linkName="ABOUT"/>
+                        <NavLink route="/contact" setCollaspeState={SetCollaspe} hideHere={"md:hidden"} linkName="CONTACT US"/>
                     </div>
                 </div>
                 <div className="w-2/4 text-center md:w-4/12">
@@ -34,8 +33,8 @@ function Header() {
                 </div>
                 <div className="w-1/4 md:flex font-bold text-sm md:justify-around md:-4/12 sm:justify-center">
                     <div className="hidden md:flex md:justify-between">
-                        <NavLink route="/" activeState={activeLink} setActiveState={setActiveLink} linkName="ABOUT"/>
-                        <NavLink route="/" activeState={activeLink} setActiveState={setActiveLink} linkName="CONTACT US"/>
+                        <NavLink route="/about" linkName="ABOUT"/>
+                        <NavLink route="/contact" linkName="CONTACT US"/>
                     </div>
                     <div className="flex justify-around md:w-1/4">
                         <a className="w-4" href="#"><img src="/images/Nav/contact-icon.svg" alt="contact icon" /></a>

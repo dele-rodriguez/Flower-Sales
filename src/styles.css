@@ -1,7 +1,22 @@
+*{
+    color:   black;
+}
+
 a {
     cursor: pointer;
 }
 
 a:hover {
     opacity: .8;
+}
+
+.home-intro{
+    height: 400px;
+    background-image: url();
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

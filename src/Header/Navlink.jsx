@@ -1,14 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link , useLocation } from "react-router-dom";
 
-function NavLink ({linkName , route , activeState , setActiveState , collaspeState , setCollaspeState , hideHere}) {
+function NavLink ({linkName , route , collaspeState , setCollaspeState , hideHere}) {
+
+    const location = useLocation();
+
     return(
         <>
             <Link
                 to={route}
-                className={`${activeState === linkName ? 'text-deeppink' : ''} ${hideHere ? 'md:hidden': ''} ${linkName === 'ABOUT'|| linkName === 'CONTACT US'? 'px-1' : ''} font-josefin text-sm`}
+                className={`${location.pathname === route ? 'text-deeppink' : ''} ${hideHere ? 'md:hidden': ''} ${linkName === 'ABOUT'|| linkName === 'CONTACT US'? 'px-1' : ''} font-josefin text-sm`}
                 onClick={() => {
-                    setActiveState(linkName);
                     if (!collaspeState) {
                         setCollaspeState(true)
                     }

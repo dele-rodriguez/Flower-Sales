@@ -19,6 +19,7 @@ export default {
         'md': '16px',
         'lg': '20px',
         'xl': '25px',
+        'xxl': '40px',
       },
       fontWeight: {
         thin:  300,
