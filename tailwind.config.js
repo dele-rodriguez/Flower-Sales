@@ -9,6 +9,7 @@ export default {
       colors: {
         lightpink: "#FBE4EC",
         deeppink: "#C13371",
+        pink: "#E49DBB" , 
       },
       fontFamily: {
         josefin: ['Josefin Sans', 'sans'],

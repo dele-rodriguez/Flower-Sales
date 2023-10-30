@@ -7,12 +7,18 @@ a {
 }
 
 a:hover {
-    opacity: .8;
+    /* opacity: .8; */
+    color: #C13371;
+}
+
+#icons a svg path:hover {
+    fill: #C13371;
 }
 
 .home-intro{
     height: 400px;
-    background-image: url();
+    background: #E49DBB url("/home/home-bg.png") no-repeat center; 
+    background-size: cover;
 }
 
 .link {
@@ -20,3 +26,45 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
+
+.featured {
+    height: 500px;
+}
+
+.mySwiper {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+
+.feature-slide {
+    background-color: #FBE4EC;
+}
+
+.slide-img {
+    width: 94%;
+    height: 75%;
+}
+
+
+@media only screen and (max-width: 390px) {
+    .home-intro{
+        background: #E49DBB url("/home/home-bg-sm.png") no-repeat center; 
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .mySwiper{
+        width: 80%;
+        height: 100%;
+    }
+}
+@media screen and (min-wid: 1000px) {
+    .mySwiper {
+        width: 60%;
+        height: 100%;
+    }
+}
+ 
+
+

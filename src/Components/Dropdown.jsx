@@ -51,4 +51,4 @@ function Dropdown ({header , linkName}) {
     )
 }
 
-export default Dropdown
+export default Dropdown;
