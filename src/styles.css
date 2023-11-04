@@ -15,6 +15,10 @@ a:hover {
     fill: #C13371;
 }
 
+#choose-us {
+    height: 650px;
+}
+
 .home-intro{
     height: 400px;
     background: #E49DBB url("/home/home-bg.png") no-repeat center; 
@@ -28,7 +32,7 @@ a:hover {
 }
 
 .featured {
-    height: 500px;
+    height: 490px;
 }
 
 .mySwiper {
@@ -47,6 +51,7 @@ a:hover {
 }
 
 
+
 @media only screen and (max-width: 390px) {
     .home-intro{
         background: #E49DBB url("/home/home-bg-sm.png") no-repeat center; 
@@ -58,8 +63,16 @@ a:hover {
         width: 80%;
         height: 100%;
     }
+    #choose-us {
+        height: 400px;
+    }
 }
-@media screen and (min-wid: 1000px) {
+@media only screen and (min-width: 640px ) {
+    #choose-us{
+        height: 420px;
+    }
+}
+@media screen and (min-width: 1000px) {
     .mySwiper {
         width: 60%;
         height: 100%;
