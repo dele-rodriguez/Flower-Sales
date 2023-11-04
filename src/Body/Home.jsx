@@ -40,7 +40,7 @@ function Home() {
                         SHOP NOW
                     </Link>
                 </section>
-                <section id="choose-us" className="bg-lightpink relative mb-3 p-3 font-frank flex flex-col sm:flex-row">
+                <section id="choose-us" className="bg-lightpink relative mb-3 px-3 py-6 font-frank flex flex-col sm:flex-row">
                     <div className="h-1/2 sm:h-full">
                         <h3 className="text-lg font-medium">Why CHOOSE US</h3>
                         {choice.map((choices , index) => (
