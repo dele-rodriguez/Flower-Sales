@@ -50,7 +50,15 @@ a:hover {
     height: 75%;
 }
 
+.behind {
+    z-index: -1;
+}
 
+.review-swiper{
+    width: 100%;
+    height: fit-content;
+
+}
 
 @media only screen and (max-width: 390px) {
     .home-intro{

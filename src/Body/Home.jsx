@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import FeatureSlide from "../Components/FeatureSlide";
 import UseMediaQuery from "../hooks/UseMediaQuery";
 import {choice} from "../data";
+import ReviewSlide from "../Components/ReviewSlide";
 
 function Home() {
     const [phoneScreen , setPhoneScreen] = useState()
@@ -40,14 +41,14 @@ function Home() {
                         SHOP NOW
                     </Link>
                 </section>
-                <section id="choose-us" className="bg-lightpink relative mb-3 px-3 py-6 font-frank flex flex-col sm:flex-row">
+                <section id="choose-us" className="bg-lightpink relative px-3 py-6 font-frank flex flex-col sm:flex-row">
                     <div className="h-1/2 sm:h-full">
-                        <h3 className="text-lg font-medium">Why CHOOSE US</h3>
+                        <h3 className="text-lg font-medium">WHY CHOOSE US</h3>
                         {choice.map((choices , index) => (
                             <div className="flex my-3 items-center" key={choices.header}>
-                                <h3 className="mr-4 text-xl text-deeppink">{index + 1}</h3>
+                                <h3 className="mr-4 text-xl text-deeppink md:text-xxl">{index + 1}</h3>
                                 <div>
-                                    <h3 className="text-md font-medium">{choices.header}</h3>
+                                    <h3 className="text-md font-medium sm:text-lg">{choices.header}</h3>
                                     <p className="font-josefin text-sm font-thin"> {choices.content} </p>
                                 </div>
                             </div>
@@ -57,8 +58,19 @@ function Home() {
                         <img src="home/Frame-215.png" alt="flowers" />
                     </div>
                 </section>
-                <section id="reviews" className="h-[450px] relative">
-                    <img src="home/" alt="" /><img src="" alt="" /><img src="" alt="" /><img src="" alt="" />
+                <section id="reviews" className="h-[450px] relative font-josefin flex flex-col justify-center">
+                    <div>
+                        <img className="absolute top-0 behind" src="home/left-t.png" alt="flower-bg" />
+                        <img className="absolute bottom-0 behind" src="home/left-b.png" alt="flower-bg" />
+                        <img className="absolute top-0 right-0 behind" src="home/right-t.png" alt="flower-bg" />
+                        <img className="absolute bottom-0 right-0 behind" src="home/right-b.png" alt="flower-bg" />
+                    </div>
+                    <div className="self-center flex flex-col relative w-full justify-center items-center">
+                        <h3 className="font-frank font-medium mb-4 sm:mb-6 sm:text-xl">WHAT CLIENT SAYS</h3>
+                        <div className="w-[99%] md:w-[70%]">
+                            <ReviewSlide />
+                        </div>
+                    </div>
                 </section>
             </section>
         </>
