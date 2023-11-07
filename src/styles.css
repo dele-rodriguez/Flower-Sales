@@ -15,6 +15,10 @@ a:hover {
     fill: #C13371;
 }
 
+#icons-1 a svg path:hover {
+    fill: black;
+}
+
 #choose-us {
     height: 710px;
 }

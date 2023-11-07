@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import UseMediaQuery from "../hooks/UseMediaQuery";
 
-function FeatureSlide() {
+function Slide(props) {
     const {w} = UseMediaQuery();
     const [slidesPerView , setSlidesPerView] = useState(1.5);
 
@@ -23,7 +23,6 @@ function FeatureSlide() {
         }
     } , [w]);
 
-    const slides =[{img: "/home/beauty.png" , name: "Rare Beauty" , price: "$ 94" , id: "rare"} , {img: "/home/sunflower.png" , name: "Sunflower bliss" , price: "$ 70" , id: "sun"} , {img: "/home/belle.png" , name: "Belle Treasure" , price: "$ 85" , id: "belle"}]
 
     return (
         <>
@@ -33,7 +32,7 @@ function FeatureSlide() {
                 loop={true}
                 className="mySwiper"
             >
-                {slides.map((slide , index) => (
+                {props.slides.map((slide , index) => (
                     <SwiperSlide
                         className="feature-slide flex flex-col items-center"
                         key={index}
@@ -49,4 +48,4 @@ function FeatureSlide() {
     )
 }
 
-export default FeatureSlide;
+export default Slide;

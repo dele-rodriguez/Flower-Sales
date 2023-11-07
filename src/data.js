@@ -8,4 +8,6 @@ const reviews = [
     {profile: "home/profile.png" , name: "Sarah Hemsworth" , review: "This flower shop is a gem! Their attention to detail is remarkable, and it truly shows in the quality of their arrangements. I've received multiple bouquets from them, and each time, I've been blown away by the beauty and freshness of the flowers. It's a pleasure supporting such a talented and passionate team."} 
 ]
 
-export {choice , reviews};
+const featureSlides =[{img: "/home/beauty.png" , name: "Rare Beauty" , price: "$ 94" , id: "rare"} , {img: "/home/sunflower.png" , name: "Sunflower bliss" , price: "$ 70" , id: "sun"} , {img: "/home/belle.png" , name: "Belle Treasure" , price: "$ 85" , id: "belle"}]
+
+export {choice , reviews , featureSlides};
