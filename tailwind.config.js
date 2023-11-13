@@ -10,6 +10,7 @@ export default {
         lightpink: "#FBE4EC",
         deeppink: "#C13371",
         pink: "#E49DBB" , 
+        grey: "#F6EEF6" ,
       },
       fontFamily: {
         josefin: ['Josefin Sans', 'sans'],

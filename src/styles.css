@@ -42,7 +42,6 @@ a:hover {
 .mySwiper {
     width: 100%;
     height: fit-content;
-    margin-bottom: 10px;
 }
 
 .feature-slide {
@@ -78,6 +77,10 @@ a:hover {
     #choose-us {
         height: 400px;
     }
+    .review-swiper {
+        width: 95%;
+        height: 100%;
+    }
 }
 @media only screen and (min-width: 640px ) {
     #choose-us{
@@ -88,6 +91,9 @@ a:hover {
     .mySwiper {
         width: 60%;
         height: 100%;
+    }
+    .review-swiper {
+        width: 70%;
     }
 }
  

@@ -10,4 +10,10 @@ const reviews = [
 
 const featureSlides =[{img: "/home/beauty.png" , name: "Rare Beauty" , price: "$ 94" , id: "rare"} , {img: "/home/sunflower.png" , name: "Sunflower bliss" , price: "$ 70" , id: "sun"} , {img: "/home/belle.png" , name: "Belle Treasure" , price: "$ 85" , id: "belle"}]
 
-export {choice , reviews , featureSlides};
+const blogSlides = [
+    {img: "home/blog-1.png" , title: "DIY Flower Crafts" , content: "There's something magical about crafting with flowers – the gentle touch of petals, the vibrant colors, and the natural beauty that unfolds as you create. DIY flower craft is a delightful" } ,
+    {img: "home/blog-2.png" , title :"Wedding Flower Trends" , content: "Wedding flowers have always been an integral part of creating a magical ambiance on the big day. With each passing year, new trends and innovative ideas emerge, adding fresh dimensions"},
+    {img: "home/blog-3.png" , title :"The Language of Flowers" , content: "Throughout history, flowers have been regarded as messengers, conveying sentiments that words alone cannot express. This silent language, known as the 'language of flowers' or floriography"}
+];
+
+export {choice , reviews , featureSlides , blogSlides};

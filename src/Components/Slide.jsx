@@ -23,27 +23,53 @@ function Slide(props) {
         }
     } , [w]);
 
+    console.log(props.blogSlides);
 
     return (
         <>
-            <Swiper
-                slidesPerView={slidesPerView}
-                spaceBetween={10}
-                loop={true}
-                className="mySwiper"
-            >
-                {props.slides.map((slide , index) => (
-                    <SwiperSlide
-                        className="feature-slide flex flex-col items-center"
-                        key={index}
-                        id={slide.id}
+            {props.slides ? (
+                <Swiper
+                    slidesPerView={slidesPerView}
+                    spaceBetween={10}
+                    loop={true}
+                    className="mySwiper"
+                >
+                    {props.slides.map((slide , index) => (
+                        <SwiperSlide
+                            className="feature-slide flex flex-col items-center"
+                            key={index}
+                            id={slide.id}
+                        >
+                            <img className="slide-img mt-2 mx-2" src={slide.img}></img>
+                            <p>{slide.name}</p>
+                            <p className="font-medium">{slide.price}</p>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>) : (
+                    <Swiper
+                        slidesPerView={slidesPerView}
+                        spaceBetween={10}
+                        loop={true}
+                        className="review-swiper"
                     >
-                        <img className="slide-img mt-2 mx-2" src={slide.img}></img>
-                        <p>{slide.name}</p>
-                        <p className="font-medium">{slide.price}</p>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+                        {props.blogSlides.map((blogSlide , index) => (
+                            <SwiperSlide
+                                className="bg-lightpink relative flex flex-col items-center p-2 pb-3 justify-around"
+                                key={index}
+                                id={blogSlide.title}
+                            >
+                                <img className="h-[60%] w-[100%]" src={blogSlide.img}></img>
+                                <div className="h-[50%] w-full flex flex-col justify-center">
+                                    <h4 className="font-frank font-bold self-start py-2">{blogSlide.title}</h4>
+                                    <p className="text-md font-josefin font-extralight">{blogSlide.content}</p>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                )
+                
+            }
+            
         </>
     )
 }

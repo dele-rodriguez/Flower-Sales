@@ -2,7 +2,7 @@ import React, { useState , useEffect } from "react"
 import { Link } from "react-router-dom";
 import Slide from "../Components/Slide";
 import UseMediaQuery from "../hooks/UseMediaQuery";
-import {choice , featureSlides} from "../data";
+import {choice , featureSlides , blogSlides} from "../data";
 import ReviewSlide from "../Components/ReviewSlide";
 
 function Home() {
@@ -37,7 +37,7 @@ function Home() {
                     />
                     <Link
                         to={"/shop"}
-                        className="bg-deeppink w-24 h-8 text-white text-sm font-normal font-josefin link md:w-28 md:h-10 md:text-md md:font-medium sm:mb-4"
+                        className="bg-deeppink my-3 w-24 h-8 text-white text-sm font-normal font-josefin link md:w-28 md:h-10 md:text-md md:font-medium sm:mb-4"
                     >
                         SHOP NOW
                     </Link>
@@ -85,6 +85,15 @@ function Home() {
                             <a className="mr-2 lg:mr-5" href=""><svg className="lg:w-6 lg:h-7" target="_blank" xmlns="http://www.w3.org/2000/svg" width="17" height="21" viewBox="0 0 23 24" fill="none"><path d="M12.1537 2.09424C8.07574 2.09424 4.05444 4.81286 4.05444 9.2023C4.05444 11.9917 5.62615 13.5917 6.57483 13.5917C6.9713 13.5917 7.19785 12.5015 7.19785 12.19C7.19785 11.8218 6.26332 11.0289 6.26332 9.49965C6.26332 6.2996 8.69875 4.04825 11.8422 4.04825C14.5466 4.04825 16.5431 5.59163 16.5431 8.40937C16.5431 10.5191 15.6935 14.4696 12.9608 14.4696C11.9696 14.4696 11.12 13.7617 11.12 12.728C11.12 11.2271 12.1678 9.76868 12.1678 8.22529C12.1678 5.59163 8.44388 6.07305 8.44388 9.24478C8.44388 9.91027 8.52884 10.6466 8.82619 11.2554C8.27397 13.6201 7.15537 17.1316 7.15537 19.567C7.15537 20.3175 7.26865 21.0538 7.33944 21.8042C7.48104 21.96 7.41024 21.9458 7.60847 21.8609C9.60496 19.1139 9.53416 18.59 10.4404 14.9935C10.936 15.9281 12.1961 16.4236 13.1873 16.4236C17.4068 16.4236 19.3042 12.3174 19.3042 8.6076C19.3042 4.6571 15.8918 2.09424 12.1537 2.09424Z" fill="#C13371"/></svg></a>
                         </div>
                     </div>
+                </section>
+                <section id="blog" className="h-[680px] sm:h-[650px] relative font-josefin flex flex-col items-center py-6">
+                    <div className="h-[20%] flex flex-col items-center">
+                        <h2 className="text-lg font-medium">BLOG</h2>
+                        <p className="w-10/12 text-md font-thin text-center py-2">Dive into our captivating blog and discover a world of blooming inspiration</p>
+                    </div>
+                    <Slide
+                        blogSlides = {blogSlides}
+                    />
                 </section>
             </section>
         </>
