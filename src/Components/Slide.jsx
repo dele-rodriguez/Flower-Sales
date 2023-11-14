@@ -23,8 +23,6 @@ function Slide(props) {
         }
     } , [w]);
 
-    console.log(props.blogSlides);
-
     return (
         <>
             {props.slides ? (

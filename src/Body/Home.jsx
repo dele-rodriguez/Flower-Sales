@@ -16,6 +16,12 @@ function Home() {
             setPhoneScreen(false);
         }
     } , [w]);
+
+    function submit(event) {
+        console.log("submitted");
+
+        event.preventDefault();
+    }
     
     return (
         <>
@@ -94,6 +100,18 @@ function Home() {
                     <Slide
                         blogSlides = {blogSlides}
                     />
+                </section>
+                <section id="news-letter" className="bg-grey h-[230px] sm:h-[200px] px-3 sm:px-12 py-5 font-josefin flex flex-col justify-around sm:flex-row">
+                    <div className="sm:w-[35%] flex flex-col justify-between sm:justify-center">
+                        <h3 className="font-frank font-medium text-lg ">NEWSLETTER </h3>
+                        <p className="text-md font-light">Sign up for our newsletter and be the first to receive exclusive floral inspirations, special offers, and updates on upcoming events.</p>
+                    </div>
+                    <form className="sm:w-[60%] self-center" onSubmit={submit}>
+                        <div className="relative h-11 flex justify-between">
+                            <input className="w-[70%] p-2 border-2 border-deeppink" type="email" name="email" id="Insert-email" placeholder="Email Adress" />
+                            <button className="w-[27%] bg-deeppink text-white " type="submit">SUBMIT</button>
+                        </div>
+                    </form>
                 </section>
             </section>
         </>
