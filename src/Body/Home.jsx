@@ -30,7 +30,7 @@ function Home() {
                     <h2 className="text-xl text-deeppink font-medium w-10/12 font-frank mb-12 md:text-xxl">Embrace the Timeless Beauty of Flowers in Every Moment</h2>
                     <Link
                         to={"/shop"}
-                        className="bg-deeppink w-24 h-8 text-white text-sm font-normal font-josefin link md:w-28 md:h-10 md:text-md md:font-medium"
+                        className="bg-deeppink w-24 h-8 text-white hover:text-white hover:text-xs text-sm font-normal font-josefin link md:w-28 md:h-10 md:text-md md:font-medium text-center"
                     >
                         SHOP NOW
                     </Link>
@@ -43,7 +43,7 @@ function Home() {
                     />
                     <Link
                         to={"/shop"}
-                        className="bg-deeppink my-3 w-24 h-8 text-white text-sm font-normal font-josefin link md:w-28 md:h-10 md:text-md md:font-medium sm:mb-4"
+                        className="bg-deeppink my-3 w-24 h-8 text-white text-sm font-normal font-josefin link md:w-28 md:h-10 md:text-md md:font-medium sm:mb-4 text-center hover:text-white hover:text-xs"
                     >
                         SHOP NOW
                     </Link>
