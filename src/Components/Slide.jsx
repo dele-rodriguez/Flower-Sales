@@ -12,14 +12,18 @@ import UseMediaQuery from "../hooks/UseMediaQuery";
 function Slide(props) {
     const {w} = UseMediaQuery();
     const [slidesPerView , setSlidesPerView] = useState(1.5);
+    const [blogSlidePerView , setBlogSlidePerView] = useState(1.5);
 
     useEffect(() => {
         if (w < 501) {
             setSlidesPerView(1.5);
+            setBlogSlidePerView(1.5);
         } else if(w > 501 && w < 700) {
             setSlidesPerView(2.5)
+            setBlogSlidePerView(2.2);
         } else {
             setSlidesPerView(3);
+            setBlogSlidePerView(3);
         }
     } , [w]);
 
@@ -45,7 +49,7 @@ function Slide(props) {
                     ))}
                 </Swiper>) : (
                     <Swiper
-                        slidesPerView={slidesPerView}
+                        slidesPerView={blogSlidePerView}
                         spaceBetween={10}
                         loop={true}
                         className="review-swiper"
@@ -56,7 +60,7 @@ function Slide(props) {
                                 key={index}
                                 id={blogSlide.title}
                             >
-                                <img className="h-[60%] w-[100%]" src={blogSlide.img}></img>
+                                <img className="h-[55%] w-[100%]" src={blogSlide.img}></img>
                                 <div className="h-[50%] w-full flex flex-col justify-center">
                                     <h4 className="font-frank font-bold self-start py-2">{blogSlide.title}</h4>
                                     <p className="text-md font-josefin font-extralight">{blogSlide.content}</p>

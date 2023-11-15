@@ -106,7 +106,7 @@ function Home() {
                         <h3 className="font-frank font-medium text-lg ">NEWSLETTER </h3>
                         <p className="text-md font-light">Sign up for our newsletter and be the first to receive exclusive floral inspirations, special offers, and updates on upcoming events.</p>
                     </div>
-                    <form className="sm:w-[60%] self-center" onSubmit={submit}>
+                    <form className="sm:w-[60%] w-[90%] self-center" onSubmit={submit}>
                         <div className="relative h-11 flex justify-between">
                             <input className="w-[70%] p-2 border-2 border-deeppink" type="email" name="email" id="Insert-email" placeholder="Email Adress" />
                             <button className="w-[27%] bg-deeppink text-white " type="submit">SUBMIT</button>
