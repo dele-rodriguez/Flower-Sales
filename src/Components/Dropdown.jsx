@@ -22,7 +22,7 @@ function Dropdown ({header , linkName}) {
             <div className="lg:w-1/3">
                 <h4 className="flex items-center font-medium">{header} 
                     <span
-                        className={`${collaspe ? 'transform -scale-y-1' : ''} px-2 lg:hidden`}
+                        className={`${collaspe ? 'transform -scale-y-1' : ''} px-2 lg:hidden cursor-pointer`}
                         onClick={() => {
                             setCollaspe((prevActiveState) => !prevActiveState);
                         }}
