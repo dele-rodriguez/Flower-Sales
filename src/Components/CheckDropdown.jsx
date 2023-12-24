@@ -7,7 +7,7 @@ function CheckDropdown ({ check , setCheck , checkFilters , dropdown}) {
     const [collaspe , setCollaspe] = useState(false);
 
     useEffect(() => {
-        if (w > 1024 ) {
+        if (w > 768 ) {
             setCollaspe(false);
         } else {
             setCollaspe(true);

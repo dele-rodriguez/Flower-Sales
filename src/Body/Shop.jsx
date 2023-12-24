@@ -1,12 +1,22 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useMemo, useRef, useState , useEffect } from 'react';
 import { shopData , occasions , types , colors } from '../data';
 import CheckDropdown from '../Components/CheckDropdown';
+import UseMediaQuery from '../hooks/useMediaQuery';
 
 function Shop() {
+    const {w} = UseMediaQuery();
     const [collaspe , setCollaspe] = useState(true);
     const [search , setSearch] = useState('');
     const [searchFocus , setSearchFocus] = useState(false);
     const [check , setCheck] = useState([]);
+
+    useEffect(() => {
+        if (w > 768 ) {
+            setCollaspe(false);
+        } else {
+            setCollaspe(true);
+        }
+    } , [w])
 
     const filteredFlowers = useMemo(() => {
         return shopData.filter(item => {
@@ -32,8 +42,8 @@ function Shop() {
 
     return (
         <>
-            <section className="shop flex flex-col py-10 px-4">
-                <div className='filters flex flex-col mb-5'>
+            <section className="shop relative flex flex-col md:flex-row py-10 md:py-20 md:mt-5 px-4">
+                <div className='filters flex flex-col mb-5 md:w-[25%] lg:w-[20%]'>
                     <div className='flex flex-row items-center justify-between'>
                         <h4
                             onClick={() => {
@@ -43,7 +53,7 @@ function Shop() {
                                 <img className='h-[15px] w-[15px] mb-1 mr-3' src="Shop/Filter.png" alt="filter-icon" /> 
                             FILTERS
                         </h4>
-                        <div className="relative flex items-center">
+                        <div className="relative md:absolute md:right-6 md:top-2 flex items-center">
                             <input
                                 type="text" 
                                 value={search} 
@@ -58,7 +68,7 @@ function Shop() {
                             </svg>
                         </div>
                     </div>
-                    <div className={`${collaspe ? 'hidden' : '' } lg:flex`}>
+                    <div className={`${collaspe ? 'hidden' : '' }`}>
                         <CheckDropdown
                             checkFilters = {occasions}
                             check = {check}
@@ -79,16 +89,16 @@ function Shop() {
                         />
                     </div>
                 </div>
-                <div className='grid gap-4 grid-cols-2 '>
+                <div className='grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 place-items-center md:w-[75%] lg-[80%] h-fit'>
                     {filteredFlowers.length === 0 ?
-                        (<p>The folwer you are searching for is unavailable. Davido don buy am😂😂😂</p>) 
+                        (<p className='w-[80%] col-span-4 font-frank'>The folwer you are searching for is unavailable. Davido don buy am😂😂😂</p>) 
                         : 
                         (filteredFlowers.map((shop) => (
                             <div
-                                className='w-[160px] bg-lightpink flex flex-col justify-between items-center font-frank py-2 px-2'
+                                className='w-[170px] bg-lightpink flex flex-col justify-between items-center font-frank py-2 px-2'
                                 key={shop.id}
                             >
-                                <img src={shop.img} alt="image" />
+                                <img className='w-[154px] h-[154px]' src={shop.img} alt="image" />
                                 <div
                                     className='text-md font-normal'
                                 >{shop.flower}</div>
