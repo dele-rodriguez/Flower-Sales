@@ -2,6 +2,7 @@ import React , {useMemo, useState} from "react";
 import { useParams , useLocation } from "react-router-dom";
 import { reviews, shopData } from "../data";
 import ReviewSlide from "../Components/ReviewSlide";
+import Slide from "../Components/Slide";
 
 
 function Product() {
@@ -28,6 +29,22 @@ function Product() {
 
     const flower = filteredFlowers[0];
 
+    const similarFlowers = useMemo(() => {
+        return shopData.filter(item => {
+            //Checks if item is an object
+            if (item && typeof item === 'object') {
+                const type = (item.Type || '').toLowerCase();
+                const color = (item.color || '').toLowerCase();
+                const ocassion = (item.ocassion || '').toLowerCase();
+                if (flower) {
+                    return type.includes(flower.Type.toLowerCase()) || color.includes(flower.color.toLowerCase()) || ocassion.includes(flower.ocassion.toLowerCase())
+                } else {
+                    return shopData; 
+                }
+            } return false; //skips if item is not an object
+        })
+    } , [flower.Type , flower.color , flower.ocassion]);
+
     return(
         <>
             {flower? (
@@ -50,7 +67,7 @@ function Product() {
                         </div>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:justify-between px-2 sm:px-0 py-6 min-[460px]:mx-12 sm:mx-4">
-                        <div className="w-[55%] pr-4">
+                        <div className="w-full sm:w-[55%] pr-4">
                             <div className="font-frank font-medium text-md">
                                 <button className={`${des === "Description"? "border-b-2 border-pink" : ""} `} onClick={() => {setDes("Description")}}>Description</button>
                                 <button className={`${des === "Review" ? "border-b-2 border-pink" : ""} ml-4 `} onClick={() => {setDes("Review")}}>{`Reviews (${flower.review.length})`}</button>
@@ -65,8 +82,14 @@ function Product() {
                                 }
                             </div>
                         </div>
-                        <div className="w-[45%] self-center min-[980px]:justify-self-end min-[980px]:w-[38%] min-[980px]:h-[330px]">
+                        <div className="w-full sm:w-[45%] self-center min-[980px]:justify-self-end min-[980px]:w-[38%] min-[980px]:h-[330px]">
                             <img className="min-[980px]:h-[330px]" src="/pic4.png" alt="flower img" />
+                        </div>
+                    </div>
+                    <div className="py-8">
+                        <h3 className="text-md sm:text-xl font-medium text-center font-frank mb-4">YOU MAY ALSO LIKE</h3>
+                        <div>
+                            <Slide data={similarFlowers}/>
                         </div>
                     </div>
                 </section>

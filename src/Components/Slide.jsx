@@ -8,11 +8,14 @@ import 'swiper/css/navigation';
 
 import { Pagination, Navigation } from 'swiper/modules';
 import UseMediaQuery from "../hooks/UseMediaQuery";
+import { Link } from "react-router-dom";
 
-function Slide(props) {
+function Slide({data , slides , blogSlides}) {
     const {w} = UseMediaQuery();
     const [slidesPerView , setSlidesPerView] = useState(1.5);
     const [blogSlidePerView , setBlogSlidePerView] = useState(1.5);
+
+    console.log(data)
 
     useEffect(() => {
         if (w < 501) {
@@ -29,32 +32,35 @@ function Slide(props) {
 
     return (
         <>
-            {props.slides ? (
-                <Swiper
-                    slidesPerView={slidesPerView}
-                    spaceBetween={10}
-                    loop={true}
-                    className="mySwiper"
-                >
-                    {props.slides.map((slide , index) => (
-                        <SwiperSlide
-                            className="feature-slide flex flex-col items-center"
-                            key={index}
-                            id={slide.id}
-                        >
-                            <img className="slide-img mt-2 mx-2" src={slide.img}></img>
-                            <p>{slide.name}</p>
-                            <p className="font-medium">{slide.price}</p>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>) : (
+            {slides ? 
+                (
+                    <Swiper
+                        slidesPerView={slidesPerView}
+                        spaceBetween={10}
+                        loop={true}
+                        className="mySwiper"
+                    >
+                        {slides.map((slide , index) => (
+                            <SwiperSlide
+                                className="feature-slide flex flex-col items-center"
+                                key={index}
+                                id={slide.id}
+                            >
+                                <img className="slide-img mt-2 mx-2" src={slide.img}></img>
+                                <p>{slide.name}</p>
+                                <p className="font-medium">{slide.price}</p>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                ) : blogSlides ?
+                (
                     <Swiper
                         slidesPerView={blogSlidePerView}
                         spaceBetween={10}
                         loop={true}
                         className="review-swiper"
                     >
-                        {props.blogSlides.map((blogSlide , index) => (
+                        {blogSlides.map((blogSlide , index) => (
                             <SwiperSlide
                                 className="bg-lightpink relative flex flex-col items-center p-2 pb-3 justify-around"
                                 key={index}
@@ -68,8 +74,33 @@ function Slide(props) {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                ) : 
+                (
+                        <Swiper
+                        slidesPerView={blogSlidePerView}
+                        spaceBetween={10}
+                        loop={true}
+                        className="mySwiper"
+                    >
+                        {data.map((data , index) => (
+                            <SwiperSlide
+                               className="bg-lightpink relative flex flex-col items-center p-2 pb-3 justify-around"
+                               key={index}
+                               id={data.flower}
+                            >
+                                <Link
+                                    to={`/shop/${data.flower}`}
+                                >
+                                    <img className="w-[100%] h-[244px]" src={"/" + data.img}></img>
+                                    <div className="h-[50%] w-full flex flex-col justify-center items-center">
+                                        <h4 className="font-frank py-2">{data.flower}</h4>
+                                        <p className="text-md font-josefin font-bold">{data.price}</p>
+                                    </div>
+                                </Link>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 )
-                
             }
             
         </>
