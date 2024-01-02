@@ -49,8 +49,8 @@ function Product() {
                             <a className="w-full bg-deeppink text-white flex pt-1 justify-center items-center h-10 hover:text-white" href="#">ADD TO CART</a>
                         </div>
                     </div>
-                    <div className="px-2 py-6 ">
-                        <div>
+                    <div className="flex flex-col sm:flex-row sm:justify-between px-2 sm:px-0 py-6 min-[460px]:mx-12 sm:mx-4">
+                        <div className="w-[55%] pr-4">
                             <div className="font-frank font-medium text-md">
                                 <button className={`${des === "Description"? "border-b-2 border-pink" : ""} `} onClick={() => {setDes("Description")}}>Description</button>
                                 <button className={`${des === "Review" ? "border-b-2 border-pink" : ""} ml-4 `} onClick={() => {setDes("Review")}}>{`Reviews (${flower.review.length})`}</button>
@@ -65,8 +65,8 @@ function Product() {
                                 }
                             </div>
                         </div>
-                        <div>
-                            <img src="/pic4.png" alt="flower img" />
+                        <div className="w-[45%] self-center min-[980px]:justify-self-end min-[980px]:w-[38%] min-[980px]:h-[330px]">
+                            <img className="min-[980px]:h-[330px]" src="/pic4.png" alt="flower img" />
                         </div>
                     </div>
                 </section>
