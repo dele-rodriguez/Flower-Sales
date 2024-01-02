@@ -9,6 +9,7 @@ import Collection from './Body/Collection';
 import Blog from './Body/Blog';
 import About from './Body/About ';
 import Contact from './Body/Contact';
+import Product from './Body/Product.jsx';
 
 function App() {
 
@@ -25,6 +26,10 @@ function App() {
             path='/shop'
             element={<Shop/>}
           ></Route>
+          <Route
+              path='/shop/:flowerID'
+              element={<Product />}
+            ></Route>    
           <Route
             path='/collection'
             element={<Collection/>}

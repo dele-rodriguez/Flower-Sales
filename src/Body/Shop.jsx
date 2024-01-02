@@ -2,6 +2,7 @@ import React, { useMemo, useRef, useState , useEffect } from 'react';
 import { shopData , occasions , types , colors } from '../data';
 import CheckDropdown from '../Components/CheckDropdown';
 import UseMediaQuery from '../hooks/useMediaQuery';
+import { Link } from 'react-router-dom';
 
 function Shop() {
     const {w} = UseMediaQuery();
@@ -94,7 +95,8 @@ function Shop() {
                         (<p className='w-[80%] col-span-4 font-frank'>The folwer you are searching for is unavailable. Davido don buy am😂😂😂</p>) 
                         : 
                         (filteredFlowers.map((shop) => (
-                            <div
+                            <Link
+                                to={`/shop/${shop.flower}`}
                                 className='w-[170px] bg-lightpink flex flex-col justify-between items-center font-frank py-2 px-2'
                                 key={shop.id}
                             >
@@ -105,7 +107,7 @@ function Shop() {
                                 <h3 
                                     className='text-sm font-medium'
                                 >{shop.price}</h3>
-                            </div>
+                            </Link>
                         )))
                     }
                 </div>
