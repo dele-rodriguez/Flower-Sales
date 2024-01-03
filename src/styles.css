@@ -29,6 +29,12 @@ a:hover {
     background-size: cover;
 }
 
+.about-intro {
+    height: 400px;
+    background: #E49DBB url("/about/bg-max.png") no-repeat center;
+    background-size: cover;
+}
+
 .link {
     display: flex;
     justify-content: center;
@@ -70,6 +76,9 @@ a:hover {
 @media only screen and (max-width: 390px) {
     .home-intro{
         background: #E49DBB url("/home/home-bg-sm.png") no-repeat center; 
+    }
+    .about-intro {
+        background: #E49DBB url("/about/bg-min.png") no-repeat center;
     }
 }
 
