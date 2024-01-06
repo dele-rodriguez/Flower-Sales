@@ -619,4 +619,6 @@ const types = ["Alstroemeria" , "Carnations" , "Daffodils" , "Daisies" , "Gerber
 
 const colors = ["Red" , "Pink" , "Yellow" , "Blue" , "Purple" ,"Rainbow" , "Ice" , "White" ]
 
-export {choice , reviews , featureSlides , blogSlides , shopData , occasions , types , colors};
+const team = [{img: "/about/founder.png" , name: "Margaret Lo" , title: "Founder"} , {img: "/about/co-founder.png" , name: "John Payne" , title: "Co-Founder"} , {img: "/about/ceo.png" , name: "Gina Thomas" , title: "CEO"} , {img: "/about/cfo.png" , name: "Martin Harold" , title: "CFO"}]
+
+export {choice , reviews , featureSlides , blogSlides , shopData , occasions , types , colors , team};

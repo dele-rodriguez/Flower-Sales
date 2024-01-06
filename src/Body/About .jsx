@@ -1,8 +1,9 @@
 import React from "react";
+import {team} from "../data"
+
 
 
 function About() {
-
 
     return (
         <>
@@ -32,6 +33,22 @@ function About() {
                             </p>
                         </div>
                         <img className="sm:w-[50%]" src="/about/mission.png" alt="" />
+                    </div>
+                </section>
+                <section className="bg-lightpink team py-10 px-4 lg:py-16 lg:px-10 font-frank mt-4" >
+                    <h2 className="uppercase text-lg font-medium text-center mb-4">Our Team</h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-5 lg:gap-9">
+                        {team.map((member , i) => (
+                            <div
+                                key={i}
+                            >
+                                <div className="flex flex-col justify-center content-center">
+                                    <img src={member.img} alt={member.name + " Profile picture"} />
+                                    <h3 className="font-medium text-center text-lg">{member.name}</h3>
+                                    <p className="text-center font-josefin text-lg">{member.title}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </section>
             </section>
