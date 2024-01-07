@@ -1,5 +1,5 @@
 import React from "react";
-import {team} from "../data"
+import {team , reasons} from "../data"
 
 
 
@@ -44,9 +44,21 @@ function About() {
                             >
                                 <div className="flex flex-col justify-center content-center">
                                     <img src={member.img} alt={member.name + " Profile picture"} />
-                                    <h3 className="font-medium text-center text-lg">{member.name}</h3>
-                                    <p className="text-center font-josefin text-lg">{member.title}</p>
+                                    <h3 className="font-medium text-center  lg:text-lg">{member.name}</h3>
+                                    <p className="text-center font-josefin  lg:text-lg">{member.title}</p>
                                 </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+                <section className="bg-grey reason py-10 px-4 lg:py-16 lg:px-10 font-frank">
+                    <h3 className="uppercase font-medium text-lg text-center mb-4">Reasons to Choose Bloom <br className="sm:hidden" /> HAVEN</h3>
+                    <div className="flex flex-col sm:flex-row sm:justify-center sm:mr-4">
+                        {reasons.map((reason) => (
+                            <div key={reason.id} className="flex flex-col items-center justify-around mb-5 h-[180px] sm:h-[230px] sm:w-[200px] sm:ml-4">
+                                <p className="text-xl text-deeppink md:text-xxl font-medium">{reason.id}</p>
+                                <h3 className="font-semibold">{reason.reason}</h3>
+                                <p className="text-center font-josefin">{reason.text}</p>
                             </div>
                         ))}
                     </div>

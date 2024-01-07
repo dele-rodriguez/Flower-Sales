@@ -621,4 +621,6 @@ const colors = ["Red" , "Pink" , "Yellow" , "Blue" , "Purple" ,"Rainbow" , "Ice"
 
 const team = [{img: "/about/founder.png" , name: "Margaret Lo" , title: "Founder"} , {img: "/about/co-founder.png" , name: "John Payne" , title: "Co-Founder"} , {img: "/about/ceo.png" , name: "Gina Thomas" , title: "CEO"} , {img: "/about/cfo.png" , name: "Martin Harold" , title: "CFO"}]
 
-export {choice , reviews , featureSlides , blogSlides , shopData , occasions , types , colors , team};
+const reasons = [{id: 1 , reason: "Freshness Guaranteed" , text: "We source our blooms directly from local farms, ensuring you receive the freshest and most vibrant flowers" } , {id:2 , reason: "Personalized Creations" , text: "Your moments are unique, and so are our arrangements. We tailor each creation to reflect your emotions and style"} , {id: 3 , reason: "Sustainability Matters" , text: "We are committed to eco-friendly practices, prioritizing sustainability in every aspect of our floral journey"}]
+
+export {choice , reviews , featureSlides , blogSlides , shopData , occasions , types , colors , team , reasons};
