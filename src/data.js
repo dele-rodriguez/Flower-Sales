@@ -11,10 +11,19 @@ const reviews = [
 const featureSlides =[{img: "/home/beauty.png" , name: "Rare Beauty" , price: "$ 94" , id: "rare"} , {img: "/home/sunflower.png" , name: "Sunflower bliss" , price: "$ 70" , id: "sun"} , {img: "/home/belle.png" , name: "Belle Treasure" , price: "$ 85" , id: "belle"}]
 
 const blogSlides = [
-  {img: "home/blog-1.png" , title: "DIY Flower Crafts" , content: "There's something magical about crafting with flowers – the gentle touch of petals, the vibrant colors, and the natural beauty that unfolds as you create. DIY flower craft is a delightful" } ,
+  {img: "home/blog-1.png" , title: "DIY Flower Crafts" , content: "There's something magical about crafting with flowers - the gentle touch of petals, the vibrant colors, and the natural beauty that unfolds as you create. DIY flower craft is a delightful" } ,
   {img: "home/blog-2.png" , title :"Wedding Flower Trends" , content: "Wedding flowers have always been an integral part of creating a magical ambiance on the big day. With each passing year, new trends and innovative ideas emerge, adding fresh dimensions"},
   {img: "home/blog-3.png" , title :"The Language of Flowers" , content: "Throughout history, flowers have been regarded as messengers, conveying sentiments that words alone cannot express. This silent language, known as the 'language of flowers' or floriography"}
 ];
+
+const blogs = [
+  {img: "/blog/blog1.png" , title: "How to Keep Flowers Fresh" , content: "Flowers have the magical ability to brighten any space and touch our hearts with their beauty and fragrance. To make the most of their charm and extend their lifespan, proper care and "},
+  {img: "/blog/blog2.png" , title: "The Healing Power of Flowers" , content: "In this blog post, we will delve into the fascinating world of floral therapy and explore how the gentle touch of flowers can uplift our spirits, soothe our souls, and contribute to our overall health and"},
+  {img: "/blog/blog3.png" , title: "The Language of Flowers" , content: "Throughout history, flowers have been regarded as messengers, conveying sentiments that words alone cannot express. This silent language, known as the 'language of flowers' or floriography"},
+  {img: "/blog/blog4.png" , title: "The Art of Floral Photography" , content: " Floral photography goes beyond just clicking pictures; it's about creating a visual symphony that resonates with the soul. In this blog post, we'll delve into the art of floral photography, exploring."},
+  {img: "/blog/blog5.png" , title: "Wedding Flower Trends" , content : "Wedding flowers have always been an integral part of creating a magical ambiance on the big day. With each passing year, new trends and innovative ideas emerge, adding fresh dimensions"},
+  {img: "/blog/blog-6.png" , title: "Creating a Lush Garden" , content: "Gardening is a journey that awakens our connection to nature and rewards us with the beauty of lush, thriving landscapes. For beginner gardeners, this venture may seem overwhelming, but with the right"}
+]
 
 const shopData = [{
   "id": 1,
@@ -623,4 +632,4 @@ const team = [{img: "/about/founder.png" , name: "Margaret Lo" , title: "Founder
 
 const reasons = [{id: 1 , reason: "Freshness Guaranteed" , text: "We source our blooms directly from local farms, ensuring you receive the freshest and most vibrant flowers" } , {id:2 , reason: "Personalized Creations" , text: "Your moments are unique, and so are our arrangements. We tailor each creation to reflect your emotions and style"} , {id: 3 , reason: "Sustainability Matters" , text: "We are committed to eco-friendly practices, prioritizing sustainability in every aspect of our floral journey"}]
 
-export {choice , reviews , featureSlides , blogSlides , shopData , occasions , types , colors , team , reasons};
+export {choice , reviews , featureSlides , blogSlides , shopData , occasions , types , colors , team , reasons , blogs};

@@ -35,6 +35,12 @@ a:hover {
     background-size: cover;
 }
 
+.blog-intro {
+    height: 400px;
+    background: #E49DBB url("/blog/bg-pc.png") no-repeat center;
+    background-size: cover;
+}
+
 .link {
     display: flex;
     justify-content: center;
@@ -79,6 +85,9 @@ a:hover {
     }
     .about-intro {
         background: #E49DBB url("/about/bg-min.png") no-repeat center;
+    }
+    .blog-intro {
+        background: #E49DBB url("/blog/bg-sm.png") no-repeat center;
     }
 }
 
