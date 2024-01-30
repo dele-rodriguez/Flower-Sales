@@ -23,7 +23,11 @@ function Blog() {
         })
     } , [search , blogs]);
 
-    console.log(filteredBlog);
+    function submit(event) {
+        console.log("submitted");
+
+        event.preventDefault();
+    }
 
     return (
         <>
@@ -66,6 +70,21 @@ function Blog() {
                             )))
                         }
                     </div>
+                </section>
+                <section className="newsletter py-10 px-6 lg:py-16 lg:px-32 bg-grey sm:flex sm:items-center justify-between">
+                    <div className="h-[230px] sm:h-[200px] sm:w-[48%] py-5 font-josefin flex flex-col justify-around">
+                        <div className="sm:w-[100%] flex flex-col justify-between sm:justify-center">
+                            <h3 className="font-frank font-medium text-lg ">NEWSLETTER </h3>
+                            <p className="text-md font-light">Sign up for our newsletter and be the first to receive exclusive floral inspirations, special offers, and updates on upcoming events.</p>
+                        </div>
+                        <form className="sm:w-[80%] w-[100%]" onSubmit={submit}>
+                            <div className="relative h-11 flex justify-between">
+                                <input className="w-[70%] p-2 border-2 border-deeppink" type="email" name="email" id="Insert-email" placeholder="Email Adress" />
+                                <button className="w-[27%] bg-deeppink text-white " type="submit">SUBMIT</button>
+                            </div>
+                        </form>
+                    </div>
+                    <img className="sm:w-[50%] lg:h-[300px] lg:w-[40%]" src="/blog/side gig.png" alt="flower img" />
                 </section>
             </section>
         </>

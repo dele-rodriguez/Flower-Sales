@@ -22,7 +22,10 @@ const blogs = [
   {img: "/blog/blog3.png" , title: "The Language of Flowers" , content: "Throughout history, flowers have been regarded as messengers, conveying sentiments that words alone cannot express. This silent language, known as the 'language of flowers' or floriography"},
   {img: "/blog/blog4.png" , title: "The Art of Floral Photography" , content: " Floral photography goes beyond just clicking pictures; it's about creating a visual symphony that resonates with the soul. In this blog post, we'll delve into the art of floral photography, exploring."},
   {img: "/blog/blog5.png" , title: "Wedding Flower Trends" , content : "Wedding flowers have always been an integral part of creating a magical ambiance on the big day. With each passing year, new trends and innovative ideas emerge, adding fresh dimensions"},
-  {img: "/blog/blog-6.png" , title: "Creating a Lush Garden" , content: "Gardening is a journey that awakens our connection to nature and rewards us with the beauty of lush, thriving landscapes. For beginner gardeners, this venture may seem overwhelming, but with the right"}
+  {img: "/blog/blog-6.png" , title: "Creating a Lush Garden" , content: "Gardening is a journey that awakens our connection to nature and rewards us with the beauty of lush, thriving landscapes. For beginner gardeners, this venture may seem overwhelming, but with the right"} , 
+  {img: "/blog/blog7.png" , title: "DIY Flower Crafts" , content: "There's something magical about crafting with flowers - the gentle touch of petals, the vibrant colors, and the natural beauty that unfolds as you create. DIY flower craft is a delightful"} , 
+  {img: "/blog/blog-8.png" , title: "Sustainable Floral Practices" , content: "In a world where environmental awareness is becoming increasingly crucial, embracing sustainable floral practices is a powerful way to contribute to a greener and healthier planet. Eco-"} , 
+  {img: "/blog/blog9.png" , title: "Festive Floral Decorations" , content: "Festive seasons are moments of joy and celebration, and what better way to elevate the ambiance than with enchanting floral decorations? Flowers have an innate ability to infuse charm,"}
 ]
 
 const shopData = [{
